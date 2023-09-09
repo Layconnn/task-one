@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap"
+      rel="stylesheet"
+    />
+    <title>HNGX TAX ONE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all ease-in-out 0.5s;
+      }
+      html {
+        font-family: "Stardom";
+      }
+      body {
+        background-color: #fffdd0;
+      }
+      .profile {
+        text-align: center;
+        margin: auto;
+        margin-top: 5rem;
+        @media(max-width: 628px){
+            margin-top: 2rem;
+        }
+      }
+      .slack-name {
+        margin-bottom: 0;
+        font-family: "Ubuntu";
+        font-size: 3rem;
+        font-weight: 600;
+        @media(max-width: 628px){
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+      }
+      h6 {
+        margin-top: 1.5rem;
+        font-size: 1.8rem;
+        @media(max-width: 628px){
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+      }
+      .profile-container {
+        margin: auto;
+        text-align: center;
+        margin-top: 5rem;
+      }
+      .slack-profile-picture {
+        width: 11.25rem;
+        height: 11.15rem;
+        margin-bottom: 0;
+        border-radius: 50%;
+        margin: auto;
+        border: 0.25rem solid black;
+        text-align: center;
+        @media(max-width: 628px){
+            width: 8.25rem;
+            height: 7.8rem;
+            border: 0.17rem solid black;
+        }
+      }
+      img{
+        max-width: 11.25rem;
+        width: 100%;
+        height: 10.7rem;
+        border-radius: 50%;
+        @media(max-width: 628px){
+            max-width: 8.25rem;
+            height: 7.7rem;
+        }
+      }
+      h2 {
+        font-size: 1.3rem;
+        max-width: 25rem;
+        margin: auto;
+        margin-top: 1.5rem;
+        @media(max-width: 628px){
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            max-width: 16.5rem;
+        }
+      }
+      .date{
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        @media(max-width: 628px){
+            font-size: 1rem;
+            font-weight: 400;
+            margin: auto;
+            margin-bottom: 0.8rem;
+            max-width: 12rem;
+        }
+      }
+      .day{
+        font-size: 1rem;
+        font-weight: 600;
+        @media(max-width: 628px){
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+      }
+      .link{
+        font-size: 1rem;
+        font-weight: 600;
+        color: cornflowerblue;
+        padding-bottom: 3rem;
+        cursor: pointer;
+        @media(max-width: 628px){
+            font-size: 0.7rem;
+            font-weight: 400;
+            padding-bottom: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile">
+      <span class="slack-name" alt="slackUserName" data-testid="slackUserName">Jinadu Olamilekan</span>
+      <h6>a frontend developer</h6>
+    </div>
+    <div class="profile-container">
+      <div class="slack-profile-picture"><img src="ball.jpg" data-testid="slackDisplayImage" alt="slackDisplayImage"></div>
+      <h2>I'm a newbie frontend developer in the ongoing hngx</h2>
+    </div>
+    <div class="profile-container">
+        <P class="date">Day of the week</P>
+        <span id="dayOfWeek" data-testid="currentDayOfTheWeek" class="day"></span>
+    </div>
+
+    <div class="profile-container">
+        <p class="date">Current UTC time in milliseconds:</p>
+        <span id="utcTime" class="day" data-testid="currentUTCTime"></span>
+    </div>
+
+    <div class="profile-container">
+        <p class="date">My track in the ongoing hngx internship is:</p>
+        <span class="day" data-testid="Frontend Development">Frontend Development</span>
+    </div>
+
+    <div class="profile-container">
+        <p class="date">The github link to this code is:</p>
+        <a class="link" href="https://github.com/Layconnn/task-one" data-testid="https://github.com/Layconnn/task-one">HERE!</a>
+    </div>
+
+    <script>
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const today = new Date();
+        const dayOfWeek = today.getDay();
+        const currentDayOfWeek = daysOfWeek[dayOfWeek];
+        const dayOfWeekElement = document.getElementById('dayOfWeek');
+        dayOfWeekElement.textContent = currentDayOfWeek;
+    </script>
+    <script>
+        const currentUTCTimeElement = document.getElementById('utcTime');
+        const currentUTCTime = Date.now(); // Get current UTC time in milliseconds
+
+        currentUTCTimeElement.textContent = currentUTCTime;
+    </script>
+  </body>
+</html>
