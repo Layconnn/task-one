@@ -23,7 +23,7 @@
       body {
         background-color: #fffdd0;
       }
-      .profile {
+      header{
         text-align: center;
         margin: auto;
         margin-top: 5rem;
@@ -31,7 +31,7 @@
             margin-top: 2rem;
         }
       }
-      .slack-name {
+      h1 {
         margin-bottom: 0;
         font-family: "Ubuntu";
         font-size: 3rem;
@@ -49,12 +49,12 @@
             margin-top: 1rem;
         }
       }
-      .profile-container {
+      section{
         margin: auto;
         text-align: center;
         margin-top: 5rem;
       }
-      .slack-profile-picture {
+      div {
         width: 11.25rem;
         height: 11.15rem;
         margin-bottom: 0;
@@ -89,7 +89,7 @@
             max-width: 16.5rem;
         }
       }
-      .date{
+      p{
         font-size: 1.4rem;
         font-weight: 600;
         margin-bottom: 1rem;
@@ -101,7 +101,7 @@
             max-width: 12rem;
         }
       }
-      .day{
+      h4{
         font-size: 1rem;
         font-weight: 600;
         @media(max-width: 628px){
@@ -109,7 +109,7 @@
             font-weight: 400;
         }
       }
-      .link{
+      a{
         font-size: 1rem;
         font-weight: 600;
         color: cornflowerblue;
@@ -121,36 +121,41 @@
             padding-bottom: 1.5rem;
         }
       }
+      footer{
+        margin: auto;
+        text-align: center;
+        margin-top: 5rem;
+      }
     </style>
   </head>
   <body>
-    <div class="profile">
-      <span class="slack-name" alt="slackUserName" data-testid="slackUserName">Jinadu Olamilekan</span>
+    <header>
+      <h1 alt="slackUserName" data-testid="slackUserName">Jinadu Olamilekan</h1>
       <h6>a frontend developer</h6>
-    </div>
-    <div class="profile-container">
-      <div class="slack-profile-picture"><img src="ball.jpg" data-testid="slackDisplayImage" alt="slackDisplayImage"></div>
+    </header>
+    <section>
+      <div><img src="ball.jpg" data-testid="slackDisplayImage" alt="slackDisplayImage"></div>
       <h2>I'm a newbie frontend developer in the ongoing hngx</h2>
-    </div>
-    <div class="profile-container">
-        <P class="date">Day of the week</P>
-        <span id="dayOfWeek" data-testid="currentDayOfTheWeek" class="day"></span>
-    </div>
+    </section>
+    <section>
+        <P>Day of the week</P>
+        <h4 id="dayOfWeek" data-testid="currentDayOfTheWeek"></h4>
+    </section>
 
-    <div class="profile-container">
-        <p class="date">Current UTC time in milliseconds:</p>
-        <span id="utcTime" class="day" data-testid="currentUTCTime"></span>
-    </div>
+    <section>
+        <p>Current UTC time in milliseconds:</p>
+        <h4 id="utcTime" data-testid="currentUTCTime"></h4>
+    </section>
 
-    <div class="profile-container">
-        <p class="date">My track in the ongoing hngx internship is:</p>
-        <span class="day" data-testid="Frontend Development">Frontend Development</span>
-    </div>
+    <section>
+        <p>My track in the ongoing hngx internship is:</p>
+        <h4 data-testid="Frontend Development">Frontend Development</h4>
+    </section>
 
-    <div class="profile-container">
-        <p class="date">The github link to this code is:</p>
-        <a class="link" href="https://github.com/Layconnn/task-one" data-testid="https://github.com/Layconnn/task-one">HERE!</a>
-    </div>
+    <footer>
+        <p>The github link to this code is:</p>
+        <a href="https://github.com/Layconnn/task-one" data-testid="https://github.com/Layconnn/task-one">HERE!</a>
+    </footer>
 
     <script>
         const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
